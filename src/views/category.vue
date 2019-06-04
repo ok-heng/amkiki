@@ -6,15 +6,15 @@
         <div class="row1">
           <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-            <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+            <span class="breadcrumb-item">彩姿</span>
           </el-breadcrumb>
         </div>
         <div class="row2">
           <div class="row2-row1">
             <div class="row2-row1-row1">
-              <i class="el-icon-arrow-right"/>
+              <el-image class="logo" :src="logo" :fit="fit"/>
               <span>
-                纽崔莱
+                彩姿
                 <sup>&reg;</sup>
               </span>
             </div>
@@ -38,22 +38,22 @@
               <span>全部</span>
             </a>
             <a href="#" class="row2-row3-text3">
-              <span>体重管理系列</span>
+              <span>卓效美肌系列</span>
             </a>
             <a href="#" class="row2-row3-text3">
-              <span>体重管理系列</span>
+              <span>唇膏系列</span>
             </a>
             <a href="#" class="row2-row3-text3">
-              <span>体重管理系列</span>
+              <span>水润保湿系列</span>
             </a>
             <a href="#" class="row2-row3-text3">
-              <span>体重管理系列</span>
+              <span>臻透焕白系列</span>
             </a>
             <a href="#" class="row2-row3-text3">
-              <span>体重管理系列</span>
+              <span>面部底妆品系列</span>
             </a>
             <a href="#" class="row2-row3-text3">
-              <span>体重管理系列</span>
+              <span>黄金面霜系列</span>
             </a>
           </div>
           <div class="divider-gray"></div>
@@ -67,10 +67,10 @@
               <span>100-199</span>
             </a>
             <a href="#" class="row2-row4-text3">
-              <span>100-199</span>
+              <span>300-499</span>
             </a>
             <a href="#" class="row2-row4-text3">
-              <span>100-199</span>
+              <span>500-699</span>
             </a>
             <el-input v-model="inputLow" placeholder="请输入" class="inputLow" size="mini"></el-input>
             <span class="divider-input">-</span>
@@ -103,15 +103,21 @@
             </div>
           </div>
         </div>
-        <div class="module3" v-for="i in 4" :key="i">
+        <div class="module3" v-for="i in 3" :key="i">
           <div class="module3-row1">
-            <Product v-for="i in 4" :key="i"/>
+            <Product
+              class="product"
+              :title="item.title"
+              :price="item.price"
+              :image="item.image"
+              v-for="item in product"
+              :key="item"
+            />
           </div>
         </div>
       </div>
     </div>
     <Footer/>
-    
   </div>
 </template>
 
@@ -130,8 +136,10 @@
       color: rgb(27, 27, 27);
     }
     .row1 {
-      display: flex;
       margin: 30px 0px;
+      .breadcrumb-item {
+        color: #067527;
+      }
     }
     .row2 {
       display: flex;
@@ -143,9 +151,11 @@
           display: flex;
           align-items: center;
           padding: 10px;
-          i {
-            margin-right: 4px;
-            font-size: 24px;
+          .logo {
+            margin-left: 10px;
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
           }
           span {
             font-size: 24px;
@@ -190,17 +200,15 @@
         .row2-row3-text1 {
           padding: 15px 30px;
           margin-right: 10px;
-          background-color: #eee;
+          background-color: rgb(248, 246, 246);
         }
         .row2-row3-text2 {
           margin-right: 30px;
           padding: 5px 5px;
-          background-color: #eee;
         }
         .row2-row3-text3 {
           margin-right: 40px;
           padding: 5px 5px;
-          background-color: #eee;
         }
       }
       .row2-row4 {
@@ -209,17 +217,15 @@
         .row2-row4-text1 {
           padding: 15px 30px;
           margin-right: 10px;
-          background-color: #eee;
+          background-color: rgb(248, 246, 246);
         }
         .row2-row4-text2 {
           margin-right: 50px;
           padding: 5px 5px;
-          background-color: #eee;
         }
         .row2-row4-text3 {
           margin-right: 80px;
           padding: 5px 5px;
-          background-color: #eee;
         }
         .inputLow {
           width: 70px;
@@ -284,6 +290,9 @@
       flex-direction: column;
       .module3-row1 {
         display: flex;
+        .product {
+          margin-right: 33px;
+        }
       }
     }
   }
@@ -305,7 +314,30 @@ export default {
   data() {
     return {
       inputLow: "",
-      inputUp: ""
+      inputUp: "",
+      logo: require("@/assets/mobile/logo4.png"),
+      product: {
+        product1: {
+          title: "雅姿®水润保湿清爽套装[超值优惠装]",
+          price: 320,
+          image: require("@/assets/category/product2.jpg")
+        },
+        product2: {
+          title: "雅姿修颜遮瑕液【3种颜色可选】—浅肤色",
+          price: 230,
+          image: require("@/assets/category/product1.jpg")
+        },
+        product3: {
+          title: "雅姿®恒时凝颜®夜间修复乳霜 强效锁水",
+          price: 260,
+          image: require("@/assets/category/product3.jpg")
+        },
+        product4: {
+          title: "雅姿®玻尿酸维C双效精华液DP精华",
+          price: 120,
+          image: require("@/assets/category/product4.jpg")
+        }
+      }
     };
   }
 };

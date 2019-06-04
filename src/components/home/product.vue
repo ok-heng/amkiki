@@ -1,10 +1,14 @@
 <template>
   <div class="product">
-    <el-image style="width: 110px; height: 110px" :src="image" :fit="fit"/>
+    <router-link :to="{name: 'detail', query: {title, price, image}}">
+      <el-image style="width: 110px; height: 110px" :src="image" :fit="fit"/>
+    </router-link>
     <div class="col2">
-      <div class="col2-row1">
-        <span class="name">{{title}}</span>
-      </div>
+      <router-link :to="{name: 'detail', query: {title, price, image}}">
+        <div class="col2-row1">
+          <span class="name">{{title}}</span>
+        </div>
+      </router-link>
       <div class="col2-row2">
         <span class="price">¥{{price}}</span>
       </div>

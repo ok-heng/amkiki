@@ -5,23 +5,22 @@
       <div class="main-detail">
         <el-breadcrumb class="module1" separator-class="el-icon-arrow-right">
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>纽崔莱</el-breadcrumb-item>
-          <el-breadcrumb-item>内服润养系列</el-breadcrumb-item>
-          <el-breadcrumb-item>纽崔莱胶原蛋白饮品</el-breadcrumb-item>
+          <el-breadcrumb-item>水润保湿系列</el-breadcrumb-item>
+          <el-breadcrumb-item>水润保湿套装</el-breadcrumb-item>
         </el-breadcrumb>
 
         <div class="module2">
           <div class="module2-row1">
             <el-image
               class="module2-row1-image"
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+              :src="image"
               :fit="fit"
             />
             <div class="module2-row1-col2">
-              <span class="module2-row1-col2-row1">纽崔莱®胶原蛋白肽饮品</span>
+              <span class="module2-row1-col2-row1">{{title}}</span>
               <span class="module2-row1-col2-row2">编号 : 29293</span>
               <span class="module2-row1-col2-row3">净含量：5g/包x30包</span>
-              <span class="module2-row1-col2-row4">￥368.00</span>
+              <span class="module2-row1-col2-row4">¥{{price}}</span>
 
               <div class="module2-row1-col2-row5">
                 <span>购买数:</span>
@@ -52,35 +51,35 @@
           <div class="module2-row2">
             <el-image
               class="module2-row2-image"
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+              :src="image"
               :fit="fit"
             />
             <el-image
               class="module2-row2-image"
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+              :src="image"
               :fit="fit"
             />
             <el-image
               class="module2-row2-image"
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+              :src="image"
               :fit="fit"
             />
             <el-image
               class="module2-row2-image"
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+              :src="image"
               :fit="fit"
             />
           </div>
         </div>
         <div class="module3">
           <div class="module3-row1">
-            <i class="el-icon-delete"/>
-            <span>立即购买</span>
+            <i class="el-icon-present"/>
+            <span>产品介绍</span>
           </div>
           <div style="width: 100%; height: 1px; background-color: #eee"></div>
         </div>
         <div class="module4">
-          <h1>雅蜜®爽肤沐浴露</h1>
+          <h1>{{title}}</h1>
           <ul>
             <li>
               <p>全新雅蜜清爽+配方，甄选芦荟精华、葡萄籽萃取物、绿茶提取物等植物精华，帮助肌肤排浊、焕发肌肤活力。</p>
@@ -90,7 +89,7 @@
             </li>
           </ul>
           <div class="row-image">
-            <el-image style="width: 600px; height: 500px" :src="images.item1" :fit="fit"/>
+            <el-image style="width: 600px; height: 500px" :src="image" :fit="fit"/>
           </div>
           <h2>美肤级身体护理</h2>
           <p>需要呵护的，从来不只有脸。雅蜜身体护理系列，如同呵护脸部肌肤般，呵护身体每一寸肌肤，悦享天然呵护。</p>
@@ -103,7 +102,7 @@
                 <p>库拉索芦荟</p>
                 <el-image
                   style="width: 300px; height: 250px"
-                  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                  :src="image"
                   :fit="fit"
                 />
                 <span style="margin-top: 20px; font-size: 18px; font-weight: 500">肌肤舒缓圣品</span>
@@ -116,7 +115,7 @@
                 <p>库拉索芦荟</p>
                 <el-image
                   style="width: 300px; height: 250px"
-                  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                  :src="image"
                   :fit="fit"
                 />
                 <span style="margin-top: 20px; font-size: 18px; font-weight: 500">肌肤舒缓圣品</span>
@@ -129,7 +128,7 @@
                 <p>库拉索芦荟</p>
                 <el-image
                   style="width: 300px; height: 250px"
-                  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                  :src="image"
                   :fit="fit"
                 />
                 <span style="margin-top: 20px; font-size: 18px; font-weight: 500">肌肤舒缓圣品</span>
@@ -140,7 +139,7 @@
 
           <el-image
             style="width: 100%; height: 250px"
-            src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+            :src="image1"
             :fit="fit"
           />
 
@@ -159,7 +158,7 @@
               <div class="module5-row2-col1-card">
                 <el-image
                   style="width: 200px; height: 200px"
-                  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                  :src="image2"
                   :fit="fit"
                 />
                 <span class="module5-row2-col1-card-title">雅姿恒时凝颜粉底液3中颜色时凝颜粉</span>
@@ -269,13 +268,16 @@
       padding: 0px 20px;
       .module3-row1 {
         margin-left: 20px;
-        font-size: 22px;
+        font-size: 25px;
       }
     }
     .module4 {
       padding: 0px 40px;
       background-color: #fff;
       margin-bottom: 20px;
+      h1 {
+        margin-top: 20px;
+      }
       .row-image {
         display: flex;
         justify-content: center;
@@ -348,11 +350,18 @@ export default {
   },
   data() {
     return {
+      title: null,
+      price: null,
+      image: null,
       num: 1,
-      images: {
-        item1: require("../assets/39604.jpg")
-      }
+      image1: require('@/assets/long.jpg'),
+      image2: require('@/assets/39604.jpg')
     };
+  },
+  created() {
+    this.title=this.$route.query.title;
+    this.price=this.$route.query.price;
+    this.image=this.$route.query.image;
   },
   methods: {
     handleChange(value) {

@@ -3,11 +3,9 @@
     <div class="main-top">
       <div class="row-1">
         <div class="col-1">
-          <el-image
-            style="width: 90px; height: 50px"
-            :src="images.logo"
-          />
-
+          <router-link :to="{name: 'home'}">
+            <el-image style="width: 90px; height: 50px" :src="images.logo"/>
+          </router-link>
           <el-select v-model="value" placeholder="送货至" size="mini">
             <el-option
               v-for="item in options"
@@ -19,17 +17,17 @@
 
           <el-divider direction="vertical"/>
 
-          <a href="#">供货状态</a>
+          <a class="opacity" href="#">供货状态</a>
         </div>
 
         <div class="col-2">
           <div class="login">
             <span>
-              您好，欢迎来到xx云购，请
-              <a href="#">【 登陆 】</a>
+              您好，欢迎来到彩姿云购，请
+              <a class="opacity" href="#">【 登陆 】</a>
             </span>
 
-            <a href="#">
+            <a class="opacity" href="#">
               <i class="el-icon-shopping-cart-2"/>
             </a>
           </div>
@@ -48,21 +46,24 @@
     width: 1100px;
     color: #fff;
     a,
-    span,
-    i {
+    i,
+    span {
       color: #fff;
-      &:hover {
-        opacity: 0.9;
-      }
     }
     .row-1 {
       display: flex;
+      .opacity:hover {
+        opacity: 0.8;
+      }
       .col-1 {
         display: flex;
         align-items: center;
         flex: 2;
         height: 72px;
         background-color: #08305c;
+        .logo {
+          opacity: 1;
+        }
       }
       .col-2 {
         display: flex;

@@ -5,10 +5,10 @@
       <div class="row-1">
         <!--  -->
         <div class="col-1">
-          <a class="menu-1" href="#">
+          <router-link class="menu-1" :to="{name: 'category'}">
             <i class="el-icon-s-unfold"/>
             <span>产品分类</span>
-          </a>
+          </router-link>
           <el-divider direction="vertical"/>
           <div class="menu-2">
             <a href="#">云购首页</a>

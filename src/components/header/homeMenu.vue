@@ -11,9 +11,9 @@
           </router-link>
           <el-divider direction="vertical"/>
           <div class="menu-2">
-            <a href="#">云购首页</a>
-            <a href="#">安利微购</a>
-            <a href="#">安利长客会</a>
+            <a href="#">彩姿首页</a>
+            <a href="#">彩姿微购</a>
+            <a href="#">彩姿长客会</a>
             <a href="#">活动专区</a>
             <a href="#">悦享荟礼品</a>
             <a href="#">海外购</a>

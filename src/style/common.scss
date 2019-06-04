@@ -7,8 +7,8 @@ button, input, select, figure {
     font-style: normal;
     text-decoration: none;
     border: none;
-    color: #222;
-    font-weight: normal;
+    color: #333;
+    font-weight: 400;
     //font-family: "Microsoft Yahei";
     //box-sizing: border-box;
     //-webkit-tap-highlight-color:transparent;
@@ -26,5 +26,6 @@ button, input, select, figure {
 html,body{
     height: 100%;
     width: 100%;
+    font-size: 15px;
     background-color: rgb(250, 250, 250);
 }

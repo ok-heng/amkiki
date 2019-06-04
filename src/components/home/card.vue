@@ -8,22 +8,22 @@
       <div class="row2-col1">
         <div class="row2-col1-row1">
           <div class="row2-col1-row1-col1">
-            <i :class="icon1"/>
+            <el-image class="image" :src="icon1" :fit="fit" />
             <span>{{text1}}</span>
           </div>
           <div class="row2-col1-row1-col1">
-            <i :class="icon2"/>
+            <el-image class="image" :src="icon2"/>
             <span>{{text2}}</span>
           </div>
         </div>
 
         <div class="row2-col1-row1">
           <div class="row2-col1-row1-col1">
-            <i :class="icon3"/>
+            <el-image class="image" :src="icon3"/>
             <span>{{text3}}</span>
           </div>
           <div class="row2-col1-row1-col1">
-            <i :class="icon4"/>
+            <el-image class="image" :src="icon4"/>
             <span>{{text4}}</span>
           </div>
         </div>
@@ -63,6 +63,10 @@
     padding: 15px;
     .row2-col1 {
       flex:1;
+      .image {
+        width: 50px; 
+        height: 50px;
+      }
       .row2-col1-row1 {
         display: flex;
         .row2-col1-row1-col1 {
@@ -70,9 +74,7 @@
           flex-direction: column;
           align-items: center;
           margin: 20px 60px 20px 0px;
-          i {
-            font-size: 22px;
-          }
+          width: 70px;
         }
       }
       .row2-col1-row2 {
